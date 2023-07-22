@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(140, 224, 234);
+}
+a {
+    color: black;
+}
+
+.title {
+    background-color: bisque;
+    color: rgb(127, 75, 18);
+    margin: 20px;
+    text-align: center;
+}
+
+.add-book {
+    color: rgb(112, 53, 18);
+}
+
+.books {
+    background-color: rgb(112, 53, 18);
+    color: bisque;
+    padding: 30px
+}

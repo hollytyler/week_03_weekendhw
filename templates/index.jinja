@@ -1,0 +1,34 @@
+{% extends 'base.jinja' %}
+{% block content %}
+    <h1 class="title">{{ title }}</h1>
+
+    <ul class="books">
+        {% for book in book_list %}
+        <li><b>{{ book.title }}</b>: {{ book.author }}, {{ book.genre }}</li>    
+        {% endfor %}
+    </ul>
+    <section class="add-book">
+        <form action="/books" method="post">
+            <label for="book">Book</label>
+            <input type="text" name="title" id="title" placeholder="Enter book title here">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" placeholder="Enter author here">
+            <label for="genre">Genre</label>
+            <input type="text" name="genre" id="genre" placeholder="Enter Genre here">
+            <input type="submit" value="Add Book">
+        </form>
+    </section>
+<div class="book-container">
+    {% for book in books %}
+    <div class="book">
+    <h2>{{ book.title }}</h2>
+    <h3>{{ book.author }}</h3>
+    <h4>{{ book.genre }}</h4>
+
+    <form class="form-inline" action="/books/delete/{{ book.title }}" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock content %}
