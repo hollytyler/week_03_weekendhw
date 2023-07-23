@@ -18,7 +18,7 @@ def add_book():
     add_new_book(new_book)
     return redirect('/books')
 
-@book_blueprint.route('/books/delete/<name>', methods=['POST'])
+@book_blueprint.route('/books/delete/<title>', methods=['POST'])
 def delete(title):
     delete_book(title)
     return redirect('/books')
