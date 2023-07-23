@@ -1,8 +1,8 @@
 from models.book import *
 
-book1 = Book("Harry Potter and the Chamber of Secrets", "J.K. Rowling", "Fantasy")
-book2 = Book("The Hobbit", "J.R.R. Tolken", "Fantasy")
-book3 = Book("Storyteller", "Dave Grohl", "Autobiography")
+book1 = Book("Harry Potter and the Chamber of Secrets", "J.K. Rowling", "Fantasy", True)
+book2 = Book("The Hobbit", "J.R.R. Tolken", "Fantasy", False)
+book3 = Book("Storyteller", "Dave Grohl", "Autobiography", False)
 
 books = [book1, book2, book3]
 
