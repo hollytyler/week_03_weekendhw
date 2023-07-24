@@ -23,3 +23,9 @@ def add_book():
 def delete(title):
     delete_book(title)
     return redirect('/books')
+
+
+@book_blueprint.route("/books/<index>")
+def books_show(index):
+    book = books[int(index)]
+    return render_template("books/show.html", book=book, index=index)
